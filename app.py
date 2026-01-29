@@ -32,8 +32,10 @@ def hello_world():
                 #print(status[0],status[1],status[4]);
                 for j in status:
                     if ("is_online:1" in j):
-                        print(status[0].split(":")[1],status[1].split(":")[1]);
-                        messages += status[0].split(":")[1] + " " +status[1].split(":")[1];
+                        #print(status[0].split(":")[1],status[1].split(":")[1]);
+                        messages += status[0].split(":")[1] + " " +status[1].split(":")[1] + " 尚有餘額<br>";
+                    else:
+                        messages += status[0].split(":")[1] + " " +status[1].split(":")[1] + " 已額滿<br>";
     print("執行結束!!!")
     return messages;
 if __name__ == "__main__":
