@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    for i in range(1):
+    for i in range(5):
         url = url_original.replace("mtypes=1","mtypes="+str(i));
         urllib3.disable_warnings();  
         s = requests.session();
@@ -25,7 +25,7 @@ def hello_world():
         messages = "";
         for data in datas:
             d = data.get('data-popover-data');
-            if d is not None and "林政寬" in d:
+            if d is not None and "邱清裕" in d:
                 d = d.replace("'","");
                 status = d.split(",");
                 #print(status[0],status[1],status[7],sep="\n");
