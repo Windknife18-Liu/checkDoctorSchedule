@@ -1,6 +1,6 @@
 from flask import Flask
 import requests
-from bs4 import BeautifulSoup
+from bs4 import beautifulsoup4
 #url_original = "http://localhost:8080/index.html"
 url_original="https://www.femh.org.tw/webregs/RegSec1.aspx?mtypes=1&ttypes=0&ptypes=-1&id=0204&uid=";
 #url = "https://www.femh.org.tw/webregs/RegSec1.aspx?ID=0204"
