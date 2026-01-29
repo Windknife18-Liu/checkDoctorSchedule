@@ -10,6 +10,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
+    messages = "";
     for i in range(5):
         url = url_original.replace("mtypes=1","mtypes="+str(i));
         urllib3.disable_warnings();  
@@ -20,9 +21,8 @@ def hello_world():
         #print(html.text)    #物件.text 取得網頁原始碼資料
         #with open("example.txt", "w", encoding="utf-8") as f:
         #    f.write(html.text)
-        sp = BeautifulSoup(html.text, 'html.parser')
-        datas = sp.find_all('a')
-        messages = "";
+        sp = BeautifulSoup(html.text, 'html.parser');
+        datas = sp.find_all('a');
         for data in datas:
             d = data.get('data-popover-data');
             if d is not None and "邱清裕" in d:
