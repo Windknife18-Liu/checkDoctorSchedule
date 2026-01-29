@@ -1,5 +1,5 @@
 from flask import Flask
-import requests, json, time
+import requests
 from bs4 import BeautifulSoup
 #url_original = "http://localhost:8080/index.html"
 url_original="https://www.femh.org.tw/webregs/RegSec1.aspx?mtypes=1&ttypes=0&ptypes=-1&id=0204&uid=";
@@ -34,7 +34,6 @@ def hello_world():
                     if ("is_online:1" in j):
                         print(status[0].split(":")[1],status[1].split(":")[1]);
                         messages += status[0].split(":")[1] + " " +status[1].split(":")[1];
-        time.sleep(3);
     print("執行結束!!!")
     return messages;
 if __name__ == "__main__":
