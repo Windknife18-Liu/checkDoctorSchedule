@@ -34,7 +34,7 @@ def hello_world():
                     if ("is_online:1" in j):
                         print(status[0].split(":")[1],status[1].split(":")[1],"尚有餘額" );
                         messages += status[0].split(":")[1] + " " +status[1].split(":")[1] + " 尚有餘額<br>";
-                    else:
+                    elif ("is_online:0" in j):
                         print(status[0].split(":")[1],status[1].split(":")[1],"已額滿" );
                         messages += status[0].split(":")[1] + " " +status[1].split(":")[1] + " 已額滿<br>";
     print("執行結束!!!")
